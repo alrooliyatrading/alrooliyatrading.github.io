@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Al Rooliya Trading Est. - Premium Automotive and Industrial Services in Qurayyat, Oman. 27+ years of trusted expertise.">
+    <meta property="og:title" content="Al Rooliya Trading Est. - Automotive Excellence">
+    <meta property="og:description" content="Professional automotive and industrial services in Qurayyat, Oman.">
+    <meta property="og:image" content="assets/logo.png">
+    
+    <title>Al Rooliya Trading Est.</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    
+    <!-- Modern Font Stack -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Lucide Icons for modern icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Modern CSS -->
+    <link rel="stylesheet" href="css/modern-styles.css">
+</head>
+<body>
+    <!-- Modern Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg class="logo-svg" width="60" height="60" viewBox="0 0 60 60">
+                    <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="176" stroke-dashoffset="176">
+                        <animate attributeName="stroke-dashoffset" dur="2s" to="0" fill="freeze"/>
+                    </circle>
+                    <text x="30" y="38" text-anchor="middle" fill="currentColor" font-size="24" font-weight="bold">R</text>
+                </svg>
+            </div>
+            <div class="preloader-text">Al Rooliya Trading</div>
+        </div>
+    </div>
+
+    <!-- Modern Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">Al Rooliya</span>
+                <span class="logo-accent">Trading</span>
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active" data-lang-en="Home" data-lang-ar="الرئيسية">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-lang-en="About" data-lang-ar="من نحن">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link" data-lang-en="Services" data-lang-ar="الخدمات">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" data-lang-en="Contact" data-lang-ar="اتصل بنا">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                    <i class="fas fa-globe"></i>
+                    <span class="lang-text">AR</span>
+                </button>
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-sun theme-icon-light"></i>
+                    <i class="fas fa-moon theme-icon-dark"></i>
+                </button>
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Modern Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg">
+                <div class="hero-gradient"></div>
+                <canvas id="hero-canvas"></canvas>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge animate-fade-up">
+                        <i class="fas fa-star"></i>
+                        <span data-lang-en="Since 1997" data-lang-ar="منذ 1997">Since 1997</span>
+                    </div>
+                    
+                    <h1 class="hero-title animate-fade-up" data-animation-delay="100">
+                        <span class="title-main" data-lang-en="Al Rooliya Trading" data-lang-ar="مؤسسة الرولية للتجارة">Al Rooliya Trading</span>
+                        <span class="title-accent gradient-text" data-lang-en="Excellence in Motion" data-lang-ar="التميز في الحركة">Excellence in Motion</span>
+                    </h1>
+                    
+                    <p class="hero-description animate-fade-up" data-animation-delay="200" 
+                       data-lang-en="Professional automotive and industrial services with 27+ years of trusted expertise in Qurayyat, Oman"
+                       data-lang-ar="خدمات السيارات والصناعية المهنية مع أكثر من 27 عامًا من الخبرة الموثوقة في قريات، عمان">
+                        Professional automotive and industrial services with 27+ years of trusted expertise in Qurayyat, Oman
+                    </p>
+                    
+                    <div class="hero-actions animate-fade-up" data-animation-delay="300">
+                        <a href="#appointment" class="btn btn-primary btn-large">
+                            <span data-lang-en="Book Service" data-lang-ar="احجز الخدمة">Book Service</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        
+                        <button class="btn btn-secondary btn-large" id="hero-contact">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.786"/>
+                            </svg>
+                            <span data-lang-en="Quick Contact" data-lang-ar="تواصل سريع">Quick Contact</span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="hero-visual animate-float">
+                    <div class="hero-shape">
+                        <div class="shape-inner">
+                            <img src="assets/logo.png" alt="Al Rooliya Trading Logo" class="hero-logo-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span data-lang-en="Scroll to explore" data-lang-ar="مرر للاستكشاف">Scroll to explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Modern About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" data-lang-en="About Us" data-lang-ar="من نحن">About Us</span>
+                    <h2 class="section-title">
+                        <span data-lang-en="Trusted Hands," data-lang-ar="أيدٍ أمينة،">Trusted Hands,</span>
+                        <span class="gradient-text" data-lang-en="Timeless Care" data-lang-ar="عناية مستمرة">Timeless Care</span>
+                    </h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content">
+                        <p class="about-text" data-lang-en="Al Rooliya Trading Establishment is a respected name in automotive care located in the heart of Qurayyat, Oman. With more than 27 years of serving our local community, we've built our reputation on honesty, skilled craftsmanship, and genuine care for our customers." 
+                           data-lang-ar="مؤسسة الرولية للتجارة اسم موثوق في مجال العناية بالسيارات، وتقع في قلب ولاية قريات بسلطنة عمان. على مدى أكثر من 27 عامًا من خدمة مجتمعنا المحلي، بنينا سمعتنا على الصدق، والحرفية العالية، والرعاية الحقيقية لعملائنا.">
+                            Al Rooliya Trading Establishment is a respected name in automotive care located in the heart of Qurayyat, Oman. With more than 27 years of serving our local community, we've built our reputation on honesty, skilled craftsmanship, and genuine care for our customers.
+                        </p>
+                        
+                        <p class="about-text" data-lang-en="We know firsthand the specific challenges vehicles face on Oman's roads and in its climate, so our experienced mechanics give each car the personal attention it deserves."
+                           data-lang-ar="نحن ندرك جيدًا التحديات الخاصة التي تواجه المركبات على طرقات عمان وفي مناخها، لذا يولي ميكانيكيونا ذوو الخبرة كل سيارة العناية الشخصية التي تستحقها.">
+                            We know firsthand the specific challenges vehicles face on Oman's roads and in its climate, so our experienced mechanics give each car the personal attention it deserves.
+                        </p>
+
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-certificate"></i>
+                                <span data-lang-en="Quality Parts" data-lang-ar="قطع عالية الجودة">Quality Parts</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span data-lang-en="Fair Prices" data-lang-ar="أسعار عادلة">Fair Prices</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span data-lang-en="Trusted Service" data-lang-ar="خدمة موثوقة">Trusted Service</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-lang-en="Guaranteed Work" data-lang-ar="عمل مضمون">Guaranteed Work</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-visual">
+                        <div class="about-image-card">
+                            <div class="image-card-inner">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                                <div class="image-badge">
+                                    <span class="badge-number">27+</span>
+                                    <span class="badge-text" data-lang-en="Years" data-lang-ar="سنة">Years</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" data-lang-en="Our Services" data-lang-ar="خدماتنا">Our Services</span>
+                    <h2 class="section-title">
+                        <span data-lang-en="Professional" data-lang-ar="خدمات">Professional</span>
+                        <span class="gradient-text" data-lang-en="Solutions" data-lang-ar="احترافية">Solutions</span>
+                    </h2>
+                </div>
+
+                <div class="services-filter">
+                    <button class="filter-btn active" data-filter="all">
+                        <span data-lang-en="All Services" data-lang-ar="جميع الخدمات">All Services</span>
+                    </button>
+                    <button class="filter-btn" data-filter="vehicle">
+                        <span data-lang-en="Vehicle" data-lang-ar="المركبات">Vehicle</span>
+                    </button>
+                    <button class="filter-btn" data-filter="industrial">
+                        <span data-lang-en="Industrial" data-lang-ar="صناعي">Industrial</span>
+                    </button>
+                </div>
+
+                <div class="services-grid" id="services-grid">
+                    <!-- Services will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Business Hours Section -->
+        <section class="hours section">
+            <div class="container">
+                <div class="hours-card">
+                    <div class="hours-header">
+                        <h3 data-lang-en="Business Hours" data-lang-ar="ساعات العمل">Business Hours</h3>
+                        <div class="status-badge" id="status-badge">
+                            <span class="status-dot"></span>
+                            <span class="status-text" id="status-text">Checking...</span>
+                        </div>
+                    </div>
+
+                    <div class="hours-grid">
+                        <div class="hours-item">
+                            <div class="hours-day" data-lang-en="Saturday - Thursday" data-lang-ar="السبت - الخميس">Saturday - Thursday</div>
+                            <div class="hours-time">
+                                <i class="fas fa-clock"></i>
+                                <span>7:30 AM - 1:30 PM</span>
+                            </div>
+                            <div class="hours-time">
+                                <i class="fas fa-clock"></i>
+                                <span>3:00 PM - 7:30 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hours-item">
+                            <div class="hours-day" data-lang-en="Friday" data-lang-ar="الجمعة">Friday</div>
+                            <div class="hours-time">
+                                <i class="fas fa-clock"></i>
+                                <span>7:30 AM - 12:30 PM</span>
+                            </div>
+                            <div class="hours-time">
+                                <i class="fas fa-clock"></i>
+                                <span>3:00 PM - 7:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" data-lang-en="Get in Touch" data-lang-ar="تواصل معنا">Get in Touch</span>
+                    <h2 class="section-title">
+                        <span data-lang-en="Ready to" data-lang-ar="جاهزون">Ready to</span>
+                        <span class="gradient-text" data-lang-en="Serve You" data-lang-ar="لخدمتك">Serve You</span>
+                    </h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-lang-en="Phone" data-lang-ar="الهاتف">Phone</h4>
+                                <a href="tel:+96899795913">+968 9979 5913</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</h4>
+                                <a href="mailto:alrooliyatrading@gmail.com">alrooliyatrading@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-lang-en="Location" data-lang-ar="الموقع">Location</h4>
+                                <p data-lang-en="Qurayyat, Oman" data-lang-ar="قريات، عمان">Qurayyat, Oman</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-full" id="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-lang-en="Chat on WhatsApp" data-lang-ar="تحدث على واتساب">Chat on WhatsApp</span>
+                        </button>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.989560149332!2d58.87434627491798!3d23.207051079044835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91b1ca533a0345%3A0x3abd4f3b6e0af1ad!2zQWwgUm9vbGl5YSBUcmFkaW5nIEVzdC4gKEJhYnUgR2FyYWdlKSAtINmF2KTYs9iz2Kkg2KfZhNix2YjZhNmK2Kkg2YTZhNiq2KzYp9ix2KkgKNio2KfYqNmI!5e0!3m2!1sen!2sie!4v1745838843846!5m2!1sen!2sie"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                        <a href="https://maps.google.com/?q=23.207051079044835,58.87434627491798" target="_blank" class="map-link">
+                            <i class="fas fa-directions"></i>
+                            <span data-lang-en="Get Directions" data-lang-ar="احصل على الاتجاهات">Get Directions</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Appointment Section -->
+        <section class="appointment section" id="appointment">
+            <div class="appointment-bg">
+                <div class="appointment-pattern"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" data-lang-en="Book Service" data-lang-ar="احجز الخدمة">Book Service</span>
+                    <h2 class="section-title">
+                        <span data-lang-en="Schedule Your" data-lang-ar="حدد موعد">Schedule Your</span>
+                        <span class="gradient-text" data-lang-en="Appointment" data-lang-ar="موعدك">Appointment</span>
+                    </h2>
+                    <p class="section-description" data-lang-en="Get your vehicle serviced by our expert mechanics. Quick, reliable, and professional service guaranteed." 
+                       data-lang-ar="احصل على خدمة مركبتك من قبل ميكانيكيينا الخبراء. خدمة سريعة وموثوقة ومهنية مضمونة.">
+                        Get your vehicle serviced by our expert mechanics. Quick, reliable, and professional service guaranteed.
+                    </p>
+                </div>
+
+                <div class="appointment-container">
+                    <div class="appointment-card">
+                        <div class="appointment-steps">
+                            <div class="step-indicator">
+                                <div class="step active" data-step="1">
+                                    <div class="step-number">1</div>
+                                    <div class="step-label" data-lang-en="Service" data-lang-ar="الخدمة">Service</div>
+                                </div>
+                                <div class="step-line"></div>
+                                <div class="step" data-step="2">
+                                    <div class="step-number">2</div>
+                                    <div class="step-label" data-lang-en="Details" data-lang-ar="التفاصيل">Details</div>
+                                </div>
+                                <div class="step-line"></div>
+                                <div class="step" data-step="3">
+                                    <div class="step-number">3</div>
+                                    <div class="step-label" data-lang-en="Confirm" data-lang-ar="تأكيد">Confirm</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="appointment-form" id="appointment-form">
+                            <!-- Step 1: Service Selection -->
+                            <div class="form-step active" id="step-1">
+                                <div class="step-header">
+                                    <h3 data-lang-en="Choose Your Service" data-lang-ar="اختر خدمتك">Choose Your Service</h3>
+                                    <p data-lang-en="Select the type of service you need for your vehicle" 
+                                       data-lang-ar="اختر نوع الخدمة التي تحتاجها لمركبتك">Select the type of service you need for your vehicle</p>
+                                </div>
+                                
+                                <div class="service-categories">
+                                    <div class="service-category" data-category="vehicle">
+                                        <div class="category-icon">
+                                            <i class="fas fa-car"></i>
+                                        </div>
+                                        <div class="category-content">
+                                            <h4 data-lang-en="Vehicle Services" data-lang-ar="خدمات المركبات">Vehicle Services</h4>
+                                            <p data-lang-en="Complete automotive care and maintenance" 
+                                               data-lang-ar="العناية الكاملة بالسيارات والصيانة">Complete automotive care and maintenance</p>
+                                        </div>
+                                        <i class="fas fa-chevron-right category-arrow"></i>
+                                    </div>
+                                    
+                                    <div class="service-category" data-category="industrial">
+                                        <div class="category-icon">
+                                            <i class="fas fa-industry"></i>
+                                        </div>
+                                        <div class="category-content">
+                                            <h4 data-lang-en="Industrial Services" data-lang-ar="الخدمات الصناعية">Industrial Services</h4>
+                                            <p data-lang-en="Professional industrial equipment repair" 
+                                               data-lang-ar="إصلاح المعدات الصناعية المهنية">Professional industrial equipment repair</p>
+                                        </div>
+                                        <i class="fas fa-chevron-right category-arrow"></i>
+                                    </div>
+                                </div>
+
+                                <div class="services-selection" id="services-selection" style="display: none;">
+                                    <div class="services-header">
+                                        <button type="button" class="btn-back" id="btn-back-to-categories">
+                                            <i class="fas fa-arrow-left"></i>
+                                            <span data-lang-en="Back" data-lang-ar="رجوع">Back</span>
+                                        </button>
+                                        <h4 class="selected-category-title"></h4>
+                                    </div>
+                                    
+                                    <div class="services-grid" id="appointment-services-grid">
+                                        <!-- Services will be populated here -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Customer Details -->
+                            <div class="form-step" id="step-2">
+                                <div class="step-header">
+                                    <button type="button" class="btn-back" id="btn-back-to-step-1">
+                                        <i class="fas fa-arrow-left"></i>
+                                        <span data-lang-en="Back" data-lang-ar="رجوع">Back</span>
+                                    </button>
+                                    <h3 data-lang-en="Your Information" data-lang-ar="معلوماتك">Your Information</h3>
+                                    <p data-lang-en="Please provide your contact details and preferred appointment time" 
+                                       data-lang-ar="يرجى تقديم تفاصيل الاتصال الخاصة بك والوقت المفضل للموعد">Please provide your contact details and preferred appointment time</p>
+                                </div>
+
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="customer-name">
+                                            <i class="fas fa-user"></i>
+                                            <span data-lang-en="Your Name" data-lang-ar="اسمك">Your Name</span>
+                                        </label>
+                                        <input type="text" id="customer-name" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="customer-phone">
+                                            <i class="fas fa-phone"></i>
+                                            <span data-lang-en="Phone Number" data-lang-ar="رقم الهاتف">Phone Number</span>
+                                        </label>
+                                        <input type="tel" id="customer-phone" placeholder="+968" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="appointment-date">
+                                            <i class="fas fa-calendar"></i>
+                                            <span data-lang-en="Preferred Date" data-lang-ar="التاريخ المفضل">Preferred Date</span>
+                                        </label>
+                                        <input type="date" id="appointment-date" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="appointment-time">
+                                            <i class="fas fa-clock"></i>
+                                            <span data-lang-en="Preferred Time" data-lang-ar="الوقت المفضل">Preferred Time</span>
+                                        </label>
+                                        <select id="appointment-time" required>
+                                            <option value="" data-lang-en="Select time..." data-lang-ar="اختر الوقت...">Select time...</option>
+                                            <!-- Time slots will be populated by JavaScript -->
+                                        </select>
+                                    </div>
+
+                                    <!-- Vehicle-specific fields -->
+                                    <div class="vehicle-fields form-grid" id="vehicle-fields" style="display: none;">
+                                        <div class="form-group">
+                                            <label for="license-plate">
+                                                <i class="fas fa-id-card"></i>
+                                                <span data-lang-en="License Plate" data-lang-ar="رقم اللوحة">License Plate</span>
+                                            </label>
+                                            <input type="text" id="license-plate" placeholder="e.g. 1234 AB" pattern="\d+\s?[A-Z]{2}" 
+                                                   data-lang-en="e.g. 1234 AB" data-lang-ar="مثال: 1234 AB">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="vehicle-make-model">
+                                                <i class="fas fa-car"></i>
+                                                <span data-lang-en="Vehicle Make & Model" data-lang-ar="نوع وطراز المركبة">Vehicle Make & Model</span>
+                                            </label>
+                                            <input type="text" id="vehicle-make-model" placeholder="Toyota Camry 2020" 
+                                                   data-lang-en="e.g. Toyota Camry 2020" data-lang-ar="مثال: Toyota Camry 2020">
+                                        </div>
+                                    </div>
+
+                                    <!-- Industrial equipment fields -->
+                                    <div class="industrial-fields form-grid" id="industrial-fields" style="display: none;">
+                                        <div class="form-group">
+                                            <label for="equipment-make-model">
+                                                <i class="fas fa-industry"></i>
+                                                <span data-lang-en="Equipment Make & Model" data-lang-ar="نوع وطراز المعدات">Equipment Make & Model</span>
+                                            </label>
+                                            <input type="text" id="equipment-make-model" placeholder="Caterpillar 320D Excavator" 
+                                                   data-lang-en="e.g. Caterpillar 320D Excavator" data-lang-ar="مثال: Caterpillar 320D Excavator">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="equipment-serial">
+                                                <i class="fas fa-barcode"></i>
+                                                <span data-lang-en="Serial Number (Optional)" data-lang-ar="الرقم التسلسلي (اختياري)">Serial Number (Optional)</span>
+                                            </label>
+                                            <input type="text" id="equipment-serial" placeholder="SN123456789">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group form-full">
+                                        <label for="message">
+                                            <i class="fas fa-comment"></i>
+                                            <span data-lang-en="Additional Details" data-lang-ar="تفاصيل إضافية">Additional Details</span>
+                                        </label>
+                                        <textarea id="message" rows="3" 
+                                                  placeholder="Describe any specific issues or requirements..."></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn btn-primary btn-large btn-next" id="btn-to-step-3">
+                                    <span data-lang-en="Review Appointment" data-lang-ar="مراجعة الموعد">Review Appointment</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+
+                            <!-- Step 3: Confirmation -->
+                            <div class="form-step" id="step-3">
+                                <div class="step-header">
+                                    <button type="button" class="btn-back" id="btn-back-to-step-2">
+                                        <i class="fas fa-arrow-left"></i>
+                                        <span data-lang-en="Back" data-lang-ar="رجوع">Back</span>
+                                    </button>
+                                    <h3 data-lang-en="Confirm Your Appointment" data-lang-ar="أكد موعدك">Confirm Your Appointment</h3>
+                                    <p data-lang-en="Please review your appointment details before confirming" 
+                                       data-lang-ar="يرجى مراجعة تفاصيل موعدك قبل التأكيد">Please review your appointment details before confirming</p>
+                                </div>
+
+                                <div class="appointment-summary">
+                                    <div class="summary-section">
+                                        <h4 data-lang-en="Service Details" data-lang-ar="تفاصيل الخدمة">Service Details</h4>
+                                        <div class="summary-item">
+                                            <i class="fas fa-wrench"></i>
+                                            <span class="summary-label" data-lang-en="Service:" data-lang-ar="الخدمة:">Service:</span>
+                                            <span class="summary-value" id="summary-service">-</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="summary-section">
+                                        <h4 data-lang-en="Contact Information" data-lang-ar="معلومات الاتصال">Contact Information</h4>
+                                        <div class="summary-item">
+                                            <i class="fas fa-user"></i>
+                                            <span class="summary-label" data-lang-en="Name:" data-lang-ar="الاسم:">Name:</span>
+                                            <span class="summary-value" id="summary-name">-</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span class="summary-label" data-lang-en="Phone:" data-lang-ar="الهاتف:">Phone:</span>
+                                            <span class="summary-value" id="summary-phone">-</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="summary-section">
+                                        <h4 data-lang-en="Appointment Time" data-lang-ar="وقت الموعد">Appointment Time</h4>
+                                        <div class="summary-item">
+                                            <i class="fas fa-calendar"></i>
+                                            <span class="summary-label" data-lang-en="Date:" data-lang-ar="التاريخ:">Date:</span>
+                                            <span class="summary-value" id="summary-date">-</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <i class="fas fa-clock"></i>
+                                            <span class="summary-label" data-lang-en="Time:" data-lang-ar="الوقت:">Time:</span>
+                                            <span class="summary-value" id="summary-time">-</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="summary-section" id="summary-message-section" style="display: none;">
+                                        <h4 data-lang-en="Additional Details" data-lang-ar="تفاصيل إضافية">Additional Details</h4>
+                                        <div class="summary-item">
+                                            <i class="fas fa-comment"></i>
+                                            <span class="summary-value" id="summary-message">-</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="confirmation-actions">
+                                    <button type="submit" class="btn btn-primary btn-large" id="submit-appointment">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <span data-lang-en="Book via WhatsApp" data-lang-ar="احجز عبر واتساب">Book via WhatsApp</span>
+                                    </button>
+                                    
+                                    <p class="confirmation-note" data-lang-en="Your appointment request will be sent via WhatsApp for quick confirmation" 
+                                       data-lang-ar="سيتم إرسال طلب موعدك عبر واتساب للتأكيد السريع">
+                                        Your appointment request will be sent via WhatsApp for quick confirmation
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Additional Info Card -->
+                    <div class="appointment-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4 data-lang-en="Quick Response" data-lang-ar="استجابة سريعة">Quick Response</h4>
+                            <p data-lang-en="We'll confirm your appointment quickly" 
+                               data-lang-ar="سنؤكد موعدك بسرعة">We'll confirm your appointment quickly</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h4 data-lang-en="Expert Service" data-lang-ar="خدمة خبراء">Expert Service</h4>
+                            <p data-lang-en="27+ years of automotive expertise" 
+                               data-lang-ar="أكثر من 27 سنة من الخبرة في السيارات">27+ years of automotive expertise</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 data-lang-en="Quality Guarantee" data-lang-ar="ضمان الجودة">Quality Guarantee</h4>
+                            <p data-lang-en="All work comes with our satisfaction guarantee" 
+                               data-lang-ar="جميع الأعمال تأتي مع ضمان الرضا">All work comes with our satisfaction guarantee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Modern Footer -->
+    <footer class="footer">
+        <div class="footer-bg">
+            <div class="footer-pattern"></div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="logo-circle">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <div class="brand-text">
+                                <h3>Al Rooliya Trading Est.</h3>
+                                <span class="brand-tagline" data-lang-en="Excellence in Motion" data-lang-ar="التميز في الحركة">Excellence in Motion</span>
+                            </div>
+                        </div>
+                        
+                        <p class="footer-description" data-lang-en="Professional automotive and industrial services with 27+ years of trusted expertise in Qurayyat, Oman. Your vehicle deserves the best care." 
+                           data-lang-ar="خدمات السيارات والصناعية المهنية مع أكثر من 27 عامًا من الخبرة الموثوقة في قريات، عمان. مركبتك تستحق أفضل عناية.">
+                            Professional automotive and industrial services with 27+ years of trusted expertise in Qurayyat, Oman. Your vehicle deserves the best care.
+                        </p>
+
+                        <div class="footer-social">
+                            <button class="social-btn whatsapp-btn" id="footer-whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span data-lang-en="WhatsApp" data-lang-ar="واتساب">WhatsApp</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="footer-sections">
+                        <div class="footer-section">
+                            <h4 data-lang-en="Quick Links" data-lang-ar="روابط سريعة">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="#home" data-lang-en="Home" data-lang-ar="الرئيسية">Home</a></li>
+                                <li><a href="#about" data-lang-en="About Us" data-lang-ar="من نحن">About Us</a></li>
+                                <li><a href="#services" data-lang-en="Our Services" data-lang-ar="خدماتنا">Our Services</a></li>
+                                <li><a href="#contact" data-lang-en="Contact" data-lang-ar="اتصل بنا">Contact</a></li>
+                                <li><a href="#appointment" data-lang-en="Book Service" data-lang-ar="احجز الخدمة">Book Service</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-section">
+                            <h4 data-lang-en="Our Services" data-lang-ar="خدماتنا">Our Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="#services" data-lang-en="Brake Service" data-lang-ar="خدمة الفرامل">Brake Service</a></li>
+                                <li><a href="#services" data-lang-en="Oil Change" data-lang-ar="تغيير الزيت">Oil Change</a></li>
+                                <li><a href="#services" data-lang-en="Engine Diagnostics" data-lang-ar="تشخيص المحرك">Engine Diagnostics</a></li>
+                                <li><a href="#services" data-lang-en="Body Work" data-lang-ar="أعمال الهيكل">Body Work</a></li>
+                                <li><a href="#services" data-lang-en="Industrial Services" data-lang-ar="الخدمات الصناعية">Industrial Services</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-section">
+                            <h4 data-lang-en="Contact Info" data-lang-ar="معلومات الاتصال">Contact Info</h4>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <span class="contact-label" data-lang-en="Phone" data-lang-ar="الهاتف">Phone</span>
+                                        <a href="tel:+96899795913">+968 9979 5913</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <span class="contact-label" data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</span>
+                                        <a href="mailto:alrooliyatrading@gmail.com">alrooliyatrading@gmail.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span class="contact-label" data-lang-en="Location" data-lang-ar="الموقع">Location</span>
+                                        <span data-lang-en="Qurayyat, Oman" data-lang-ar="قريات، عمان">Qurayyat, Oman</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-section">
+                            <h4 data-lang-en="Business Hours" data-lang-ar="ساعات العمل">Business Hours</h4>
+                            <div class="business-hours">
+                                <div class="hours-item">
+                                    <span class="hours-days" data-lang-en="Sat - Thu" data-lang-ar="السبت - الخميس">Sat - Thu</span>
+                                    <span class="hours-times">7:30AM - 1:30PM<br>3:00PM - 7:30PM</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="hours-days" data-lang-en="Friday" data-lang-ar="الجمعة">Friday</span>
+                                    <span class="hours-times">7:30AM - 12:30PM<br>3:00PM - 7:30PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <div class="copyright">
+                            <p>&copy; 2025 Al Rooliya Trading Est. 
+                                <span data-lang-en="All rights reserved." data-lang-ar="جميع الحقوق محفوظة.">All rights reserved.</span>
+                            </p>
+                            <p class="cr-number">
+                                <span data-lang-en="CR Number:" data-lang-ar="رقم السجل التجاري:">CR Number:</span> 15484626
+                            </p>
+                        </div>
+                        
+                        <div class="footer-cta">
+                            <a href="#appointment" class="footer-cta-btn">
+                                <i class="fas fa-calendar-check"></i>
+                                <span data-lang-en="Book Service Now" data-lang-ar="احجز الخدمة الآن">Book Service Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fab-container">
+        <button class="fab fab-whatsapp" id="fab-whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+        <button class="fab fab-scroll" id="fab-scroll" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Modern JavaScript -->
+    <script src="js/modern-app.js" type="module"></script>
+</body>
+</html>
